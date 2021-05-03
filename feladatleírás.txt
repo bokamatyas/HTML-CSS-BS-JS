@@ -1,4 +1,4 @@
-HTML-CSS-Bootstap-JavaScript feladat
+HTML-CSS-Bootstrap-JavaScript feladat
 ====================================
 
 Választani kell 2db tetszőleges síkidomot és 2db testet:
