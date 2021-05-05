@@ -9,7 +9,7 @@
     <title>Síkidomok/Testek</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="index.css">
     <script src="kalkulator.js"></script>
 </head>
 
@@ -30,7 +30,7 @@
                         <hr>
                         <p class="card-text text-white">Kalkulátor:</p>
                         <label class="card-text text-white" for="r">Sugár (r):</label>
-                        <input type="number" id="r" name="sugár" size="18" placeholder="A kör sugara cm-ben" onchange="kor_kalkulal()">
+                        <input type="number" id="r" name="sugár" size="18" placeholder="A kör sugara" onchange="kor_kalkulal()"> cm
                         <hr>
                         <label class="card-text text-white" for="kkeredmeny">A kör Kerülete:</label>
                         <input type="text" class="form-control" id="kkeredmeny" disabled>
@@ -41,21 +41,25 @@
             </div>
             <div class="col-lg-3 col-sm-12 col-md-6">
                 <div class="card bg-dark" style="width:250px">
-                    <img class="card-img-top" src="képek/négyzet.jfif" alt="négyzet" style="width:100%">
+                    <img class="card-img-top" src="képek/paralelogramma.jpg" alt="négyzet" style="width:100%; height:250px;">
                     <div class="card-body">
-                        <h4 class="card-title text-white">Négyzet</h4>
+                        <h4 class="card-title text-white">Paralelogramma</h4>
                         <hr>
                         <h6 class="card-title text-white">Képletek:</h6>
-                        <p class="card-text text-white">Kerület: K = 4 * a <br> Terület: T = a<sup>2</sup></p>
+                        <p class="card-text text-white">Kerület: K = 2 * (a + b) <br> Terület: a * m<sub>a</sub> / b * m<sub>b</sub></p>
                         <hr>
-                        <p class="card-text text-white">Kalkulátor:</p>
+                        <p class="card-text text-white">Kalkulátor:</p> <span id="buttons"><button id="button1" onclick="button1()">"b" oldalmagasság használata</button></span>
                         <label class="card-text text-white" for="a">Oldalhossz (a):</label>
-                        <input type="number" id="a" name="sugár" size="18" placeholder="A négyzet oldala cm-ben" onchange="negyzet_kalkulal()">
+                        <input type="number" id="a" name="a" size="18" placeholder="A Paralelogramma a oldala" onchange="para_kalkulal_ma(), para_kalkulal_mb()"> cm
+                        <label class="card-text text-white" for="b">Oldalhossz (b):</label>
+                        <input type="number" id="b" name="b" size="18" placeholder="A Paralelogramma b oldala" onchange="para_kalkulal_ma(), para_kalkulal_mb()"> cm
+                        <label id="button" class="card-text text-white" for="ma">Magasság:</label>
+                        <input type="number" id="ma" name="ma" size="18" placeholder="a oldal magassága" onchange="para_kalkulal_ma()"> cm
                         <hr>
-                        <label class="card-text text-white" for="nkeredmeny">A négyzet Kerülete:</label>
-                        <input type="text" class="form-control" id="nkeredmeny" disabled>
-                        <label class="card-text text-white" for="nteredmeny">A négyzet Területe:</label>
-                        <input type="text" class="form-control" id="nteredmeny" disabled>
+                        <label class="card-text text-white" for="pkeredmeny">A paralelogramma Kerülete:</label>
+                        <input type="text" class="form-control" id="pkeredmeny" disabled>
+                        <label class="card-text text-white" for="pteredmeny">A paralelogramma Területe:</label>
+                        <input type="text" class="form-control" id="pteredmeny" disabled>
                     </div>
                 </div>
             </div>
@@ -70,7 +74,7 @@
                         <hr>
                         <p class="card-text text-white">Kalkulátor:</p>
                         <label class="card-text text-white" for="g">Sugár (r):</label>
-                        <input type="number" id="g" name="sugár_gomb" size="18" placeholder="A Gömb Sugara cm-ben" onchange="gomb_kalkulal()">
+                        <input type="number" id="g" name="sugár_gomb" size="18" placeholder="A Gömb Sugara" onchange="gomb_kalkulal()"> cm
                         <hr>
                         <label class="card-text text-white" for="gferedmeny">A gömb felszíne:</label>
                         <input type="text" class="form-control" id="gferedmeny" disabled>
@@ -90,11 +94,11 @@
                         <hr>
                         <p class="card-text text-white">Kalkulátor:</p>
                         <label class="card-text text-white" for="a2">a oldal:</label>
-                        <input type="number" id="a2" name="a_tegla" size="18" placeholder="A Tégla a oldala cm-ben" onchange="tegla_kalkulal()">
-                        <label class="card-text text-white" for="b">b oldal:</label>
-                        <input type="number" id="b" name="b_tegla" size="18" placeholder="A Tégla b oldala cm-ben" onchange="tegla_kalkulal()">
+                        <input type="number" id="a2" name="a_tegla" size="18" placeholder="A Tégla a oldala" onchange="tegla_kalkulal()"> cm
+                        <label class="card-text text-white" for="bt">b oldal:</label>
+                        <input type="number" id="bt" name="b_tegla" size="18" placeholder="A Tégla b oldala" onchange="tegla_kalkulal()"> cm
                         <label class="card-text text-white" for="c">c oldal:</label>
-                        <input type="number" id="c" name="c_tegla" size="18" placeholder="A Tégla c oldala cm-ben" onchange="tegla_kalkulal()">
+                        <input type="number" id="c" name="c_tegla" size="18" placeholder="A Tégla c oldala" onchange="tegla_kalkulal()"> cm
                         <hr>
                         <label class="card-text text-white" for="tferedmeny">A gömb felszíne:</label>
                         <input type="text" class="form-control" id="tferedmeny" disabled>
