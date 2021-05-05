@@ -138,7 +138,7 @@ function tegla_kalkulal() {
   var tferedmeny = 2 * (a * b + a * c + b * c);
   var tteredmeny = a * b * c;
   document.getElementById("tferedmeny").value =
-    tferedmeny.toLocaleString() + " cm2";
+    tferedmeny.toLocaleString() + " cm^2";
   document.getElementById("tteredmeny").value =
-    tteredmeny.toLocaleString() + " cm3";
+    tteredmeny.toLocaleString() + " cm^3";
 }
