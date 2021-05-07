@@ -20,6 +20,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-sm-12 col-md-6">
+                <!-- Első kártya, kör síkidom -->
                 <div class="card bg-dark" style="width:250px">
                     <img class="card-img-top" src="képek/Kor.jpg" alt="kör" style="width:100%">
                     <div class="card-body">
@@ -29,9 +30,11 @@
                         <p class="card-text text-white">Kerület: K = 2 * r * π <br> Terület: T = r <sup>2</sup> * π</p>
                         <hr>
                         <p class="card-text text-white">Kalkulátor:</p>
+                        <!-- Beviteli mező(k) -->
                         <label class="card-text text-white" for="r">Sugár (r):</label>
                         <input type="number" id="r" name="sugár" size="18" placeholder="A kör sugara" onchange="kor_kalkulal()"> cm
                         <hr>
+                        <!-- Végredmények -->
                         <label class="card-text text-white" for="kkeredmeny">A kör Kerülete:</label>
                         <input type="text" class="form-control" id="kkeredmeny" disabled>
                         <label class="card-text text-white" for="kteredmeny">A kör Területe:</label>
@@ -40,6 +43,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-sm-12 col-md-6">
+                <!-- Második kártya, paralelogramma síkidom -->
                 <div class="card bg-dark" style="width:250px">
                     <img class="card-img-top" src="képek/paralelogramma.jpg" alt="négyzet" style="width:100%; height:250px;">
                     <div class="card-body">
@@ -50,12 +54,14 @@
                         <hr>
                         <p class="card-text text-white">Kalkulátor:</p> <span id="buttons"><button id="button1" onclick="button1()">"b" oldalmagasság használata</button></span>
                         <label class="card-text text-white" for="a">Oldalhossz (a):</label>
+                        <!-- Beviteli mező(k) -->
                         <input type="number" id="a" name="a" size="18" placeholder="A Paralelogramma a oldala" onchange="para_kalkulal_ma(), para_kalkulal_mb()"> cm
                         <label class="card-text text-white" for="b">Oldalhossz (b):</label>
                         <input type="number" id="b" name="b" size="18" placeholder="A Paralelogramma b oldala" onchange="para_kalkulal_ma(), para_kalkulal_mb()"> cm
                         <label id="button" class="card-text text-white" for="ma">Magasság:</label>
                         <input type="number" id="ma" name="ma" size="18" placeholder="a oldal magassága" onchange="para_kalkulal_ma()"> cm
                         <hr>
+                        <!-- Végredmények -->
                         <label class="card-text text-white" for="pkeredmeny">A paralelogramma Kerülete:</label>
                         <input type="text" class="form-control" id="pkeredmeny" disabled>
                         <label class="card-text text-white" for="pteredmeny">A paralelogramma Területe:</label>
@@ -64,6 +70,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-sm-12 col-md-6">
+                <!-- Harmadik kártya, Gömb test -->
                 <div class="card bg-dark" style="width:250px">
                     <img class="card-img-top" src="képek/gömb.png" alt="gömb" style="width:100%">
                     <div class="card-body">
@@ -73,9 +80,11 @@
                         <p class="card-text text-white">Felszín: A = 4 * r<sup>2</sup> * π<br> Térfogat: V = 4 * r<sup>3</sup> * π * <sup>1</sup>&frasl;<sub>3</sub></p>
                         <hr>
                         <p class="card-text text-white">Kalkulátor:</p>
+                        <!-- Beviteli mező(k) -->
                         <label class="card-text text-white" for="g">Sugár (r):</label>
                         <input type="number" id="g" name="sugár_gomb" size="18" placeholder="A Gömb Sugara" onchange="gomb_kalkulal()"> cm
                         <hr>
+                        <!-- Végredmények -->
                         <label class="card-text text-white" for="gferedmeny">A gömb felszíne:</label>
                         <input type="text" class="form-control" id="gferedmeny" disabled>
                         <label class="card-text text-white" for="gteredmeny">A gömb térfogata:</label>
@@ -84,6 +93,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-sm-12 col-md-6">
+                <!-- Negyedik kártya, Téglatest Test -->
                 <div class="card bg-dark" style="width:250px">
                     <img class="card-img-top" src="képek/tégla.png" alt="kör" style="width:100%">
                     <div class="card-body">
@@ -93,6 +103,7 @@
                         <p class="card-text text-white">Felszín: <br>A = 2 * (a * b + a * c + b * c)<br> Térfogat: V = a * b * c</p>
                         <hr>
                         <p class="card-text text-white">Kalkulátor:</p>
+                        <!-- Beviteli mező(k) -->
                         <label class="card-text text-white" for="a2">a oldal:</label>
                         <input type="number" id="a2" name="a_tegla" size="18" placeholder="A Tégla a oldala" onchange="tegla_kalkulal()"> cm
                         <label class="card-text text-white" for="bt">b oldal:</label>
@@ -100,6 +111,7 @@
                         <label class="card-text text-white" for="c">c oldal:</label>
                         <input type="number" id="c" name="c_tegla" size="18" placeholder="A Tégla c oldala" onchange="tegla_kalkulal()"> cm
                         <hr>
+                        <!-- Végredmények -->
                         <label class="card-text text-white" for="tferedmeny">A gömb felszíne:</label>
                         <input type="text" class="form-control" id="tferedmeny" disabled>
                         <label class="card-text text-white" for="tteredmeny">A gömb térfogata:</label>
