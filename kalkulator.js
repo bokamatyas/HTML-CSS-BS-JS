@@ -1,3 +1,4 @@
+// Kör terület-kerület számítása
 function kor_kalkulal() {
   var sugar = parseFloat(document.getElementById("r").value);
   if (sugar <= 0) {
@@ -12,6 +13,7 @@ function kor_kalkulal() {
     kterulet.toLocaleString() + " cm^2";
 }
 
+// Paralelogramma magasság bevitelimező váltógombja 1 
 function button1() {
   var tag_remove = document.getElementById("buttons");
   tag_remove.removeChild(tag_remove.childNodes[0]);
@@ -35,6 +37,7 @@ function button1() {
   button_search.appendChild(btn);
 }
 
+// Paralelogramma magasság bevitelimező váltógombja 2
 function button2() {
   var btn_remove = document.getElementById("buttons");
   btn_remove.removeChild(btn_remove.childNodes[0]);
@@ -57,6 +60,7 @@ function button2() {
   button_search.appendChild(btn);
 }
 
+// Paralelogramma terület-kerület számítása "a" magasság használatával
 function para_kalkulal_ma() {
   var a_oldal = parseFloat(document.getElementById("a").value);
   var b_oldal = parseFloat(document.getElementById("b").value);
@@ -81,6 +85,7 @@ function para_kalkulal_ma() {
     pteredmeny.toLocaleString() + " cm^2";
 }
 
+// Paralelogramma terület-kerület számítása "b" magasság használatával
 function para_kalkulal_mb() {
   var a_oldal = parseFloat(document.getElementById("a").value);
   var b_oldal = parseFloat(document.getElementById("b").value);
@@ -105,6 +110,7 @@ function para_kalkulal_mb() {
     pteredmeny.toLocaleString() + " cm^2";
 }
 
+// Gömb felszín-térfogat számítása
 function gomb_kalkulal() {
   var sugar2 = parseFloat(document.getElementById("g").value);
   if (sugar2 <= 0) {
@@ -119,6 +125,7 @@ function gomb_kalkulal() {
     gteredmeny.toLocaleString() + " cm^3";
 }
 
+// Téglatest felszín-térfogat számítása
 function tegla_kalkulal() {
   var a = parseFloat(document.getElementById("a2").value);
   var b = parseFloat(document.getElementById("bt").value);
